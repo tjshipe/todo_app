@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="top">
+    <h1>todo list</h1>
+  </div>
+  <div class="middle">
+    <ul>
+      <% @list.tasks.each do |task| %>
+        <li><%= task.name %> <a href="/list/<%= @list.id %>/<%= task.id %>/delete">Delete</a>
+      <% end %>
+    </ul>
+    <a href="/list/<%= @list.id %>/new_task"><button class="list">Add A Task</button></a>
+  </div>
+  <div class="bottom">
+  </div>
+</div>

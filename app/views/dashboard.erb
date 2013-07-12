@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="top">
+    <h1>todo list.</h1>
+  </div>
+  <div class="middle">
+    <ul>
+      <% current_user.lists.each do |list| %>
+        <a href="/list/<%= list.id %>"><li><%= list.name %></li></a>
+      <% end %>
+    </ul>
+  </div>
+  <a href="/list/new"><div class="bottom">
+    create a new list
+  </div></a>
+</div>

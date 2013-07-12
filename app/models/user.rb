@@ -5,6 +5,8 @@ class User < ActiveRecord::Base
   validates :entered_password, :length => { :minimum => 6 }
   validates :email, :uniqueness => true, :format => /.+@.+\..+/ # imperfect, but okay
 
+  has_many :lists
+
   include BCrypt
 
   def password
@@ -22,5 +24,4 @@ class User < ActiveRecord::Base
     return user if user && (user.password == password)
     nil # either invalid email or wrong password
   end
-
 end

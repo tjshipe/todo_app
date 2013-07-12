@@ -1,11 +1,19 @@
+body {
+  background-color: #ecf0f1;
+  font-family: Sans-Serif;
+}
 .container {
   margin: 20px auto;
-  width: 800px;
-  padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+  width: 400px;
+  padding: 0;
+  border: 0;
 }
 
 .container h1 {
+  font-family: bookman-old-style;
+  letter-spacing: 3px;
+  color: white;
+  margin: 0;
   font-size: 17pt;
 }
 
@@ -14,6 +22,17 @@
   margin: 0 auto;
   padding: 0 auto;
 }
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/*---------------------Nav-------------------*/
 
 nav {
   width: 100%;
@@ -55,8 +74,21 @@ form label {
   margin-right: 20px;
 }
 
-input {
-  margin-bottom: 10px;
+/*---------------------Sign In/Sign Out-------------------*/
+
+.user_input {
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 4px;
+}
+
+.top_input {
+  border-radius: 5px 5px 0 0;
+}
+
+.bottom_input {
+  border-radius: 0 0 5px 5px;
 }
 
 .errors {
@@ -68,13 +100,75 @@ form.quirks {
 }
 
 .submit {
+  margin-top: 10px;
   text-align: center;
 }
 
+input[type="submit"] {
+  width: 100%;
+}
+
 .label {
+  display: none;
   font-weight: bold;
   float: left;
   text-align: right;
   margin-right: 20px;
   width: 200px;
+}
+
+/*---------------------Container && Content-------------------*/
+.top {
+  padding: 10px 0;
+  display: block;
+  background-color: #2980b9;
+}
+
+.middle {
+  color: white;
+  background-color: #3498db;
+  display: inline-block;
+  text-align: center;
+  width:100%;
+  padding: 15px 0;
+  margin: 0;
+}
+
+.middle h1 {
+  margin: 0;
+}
+
+.middle ul {
+  padding: 0;
+  margin: 0;
+}
+
+.middle li {
+  padding: 5px 15px;
+  list-style: none;
+  background-color: #3498db;
+}
+
+.bottom {
+  font-size: 14pt;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  background-color: #2980b9;
+}
+
+.bottom > a {
+  padding: 10px 0;
+}
+
+input[type="submit"] {
+  color: white;
+  border: none;
+  background-color: #3498db;
+  padding: 5px 0;
+}
+
+input[type="submit"]:hover {
+  background-color: #2980b9;
+  text-decoration: underline
 }
