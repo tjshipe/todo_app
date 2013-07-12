@@ -1,14 +1,17 @@
 <div class="container">
   <div class="top">
-    <h1>create a new task</h1>
+    <h1>todo list.</h1>
   </div>
-  <div class="#">
+  <div class="middle">
     <form action="/<%= @list.id %>/task/create" method="POST">
-      <label for="list[name]">Task Name:</label>
+      <label for="list[name]">Task:</label>
       <input type="text" name="task[name]" placeholder="e.g. Buy Bread">
+      <br>
+      <br>
       <input type="submit" value="Add task to list">
     </form>
   </div>
-  <div class="bottom">
+  <a href="/"><div class="bottom">
+    home
   </div>
 </div>
